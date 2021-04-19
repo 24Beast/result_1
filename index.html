@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseline Results</title>
+</head>
+<body>
+    <h1>Results</h1><br>
+    <div id="images" style="text-align: center;"></div>
+    <script>
+        var f_names = ['adam_dog-example-153', 'ng_0', 'ng_1', 'ng_10', 'ng_11', 'ng_12', 'ng_2', 'ng_3', 'ng_4', 'ng_5', 'ng_6', 'ng_7', 'ng_8', 'ng_9', 'ng_dog-example-153'];
+        for(var file of f_names){
+            var img = document.createElement("img");
+            img.src = "./"+file+"/mask.jpg";
+            img.height=256;
+            img.width=256;
+            document.getElementById("images").appendChild(img);
+            var img1 = document.createElement("img");
+            img1.src = "./"+file+"/target.jpg";
+            img1.height=256;
+            img1.width=256;
+            document.getElementById("images").appendChild(img1);
+            var img2 = document.createElement("img");
+            img2.src = "./"+file+"/out.jpg";
+            img2.height=256;
+            img2.width=256;
+            document.getElementById("images").appendChild(img2);
+            var b = document.createElement("hr");
+            document.getElementById("images").appendChild(b);
+            console.log("./Figure_"+file+".png");
+        }
+    </script>
+</body>
+</html>
